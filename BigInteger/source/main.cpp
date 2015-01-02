@@ -1,22 +1,12 @@
 /*
- *	CSC_211_Fall2012_E/hw_2/source/dec_to_binary.cpp
  *
- *	Class:			CSC 21100, Section E
- *	Date:			Sep. 9, 2012
  *	Author:			Haleeq Usman
- *	Dev. IDE:		Eclipse IDE for C/C++ Developers
- *		 			Version: Indigo Service Release 2
- *		 			Build id: 20120216-1857
- *	Dev. OS:		Windows 7 Home Premium SP1 (64-bitS)
- *	Dev. System:	Dell XPS 8300, 8GB RAM Intel(R) Core(TM)
- *					i7-2600 CPU @ 3.40Ghz (quad core at 3.40Ghz)
  *
- *	This file contains the implemenation for the decimal to binary
- *	converter.
+ *	This file contains the main executable/start point of program.
  *
  */
 
-#include "headers/globals.h"
+#include "include/globals.h"
 
 void dec_to_binary32() {
 	time_t start_time;
@@ -66,4 +56,9 @@ void dec_to_binary32() {
 	printf(
 			"The function sum_ints_fast() took ~%.2lf seconds --> ~%.2lf minutes\n",
 			elapsed_time, elapsed_time / 60);
+}
+
+int main() {
+	dec_to_binary32();
+	return 0;
 }

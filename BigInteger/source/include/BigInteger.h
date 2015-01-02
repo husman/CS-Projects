@@ -1,11 +1,5 @@
 /*
  *	Author:			Haleeq Usman
- *	Dev. IDE:		Eclipse IDE for C/C++ Developers
- *		 			Version: Indigo Service Release 2
- *		 			Build id: 20120216-1857
- *	Dev. OS:		Windows 7 Home Premium SP1 (64-bitS)
- *	Dev. System:	Dell XPS 8300, 8GB RAM Intel(R) Core(TM)
- *					i7-2600 CPU @ 3.40Ghz (quad core at 3.40Ghz)
  *
  *	This file contains the definition for our simple BigInteger class.
  *
@@ -14,7 +8,7 @@
 #ifndef BIGINTEGER_H_
 #define BIGINTEGER_H_
 
-#include <iostream>
+#include "globals.h"
 
 class BigInteger {
 	friend std::ostream &operator<<(std::ostream &output, const BigInteger &big_int);

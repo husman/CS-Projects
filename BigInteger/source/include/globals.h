@@ -1,11 +1,5 @@
 /*
  *	Author:			Haleeq Usman
- *	Dev. IDE:		Eclipse IDE for C/C++ Developers
- *		 			Version: Indigo Service Release 2
- *		 			Build id: 20120216-1857
- *	Dev. OS:		Windows 7 Home Premium SP1 (64-bitS)
- *	Dev. System:	Dell XPS 8300, 8GB RAM Intel(R) Core(TM)
- *					i7-2600 CPU @ 3.40Ghz (quad core at 3.40Ghz)
  *
  *	This file contains our static/global variables/constants,
  *	data structures (enum, structs, classes, etc...), and
@@ -28,7 +22,9 @@
 // We use this to measure how effective our algorithms are.
 #include <time.h>
 // Used in our threaded algorithm.
+#ifdef WIN32
 #include <windows.h>
+#endif
 // We use this for our BigInteger class
 #include <vector>
 // Let's include our BigInteger header

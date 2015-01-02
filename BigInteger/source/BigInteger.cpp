@@ -1,17 +1,13 @@
 /*
  *	Author:			Haleeq Usman
- *	Dev. IDE:		Eclipse IDE for C/C++ Developers
- *		 			Version: Indigo Service Release 2
- *		 			Build id: 20120216-1857
- *	Dev. OS:		Windows 7 Home Premium SP1 (64-bitS)
- *	Dev. System:	Dell XPS 8300, 8GB RAM Intel(R) Core(TM)
- *					i7-2600 CPU @ 3.40Ghz (quad core at 3.40Ghz)
  *
- *	This file contains the implementation for our simple BigInteger class.
+ *  This file contains the implementation for our simple BigInteger class.
  *
  */
 
-#include "headers/globals.h"
+#include "include/BigInteger.h"
+
+bool isNewline(std::istream &input, char c);
 
 BigInteger::BigInteger() {
 	// Nothing to do for now
@@ -129,13 +125,17 @@ std::ostream &operator<<(std::ostream &output, const BigInteger &big_int) {
 
 std::istream &operator>>(std::istream &input, BigInteger &big_int) {
 	char c;
-	while ((c != '\n') && (c != '\r\n')) {
+	while (!isNewline(input, c)) {
 		input.get(c);
-		if ((c != '\n') && (c != '\r\n')) {
+		if ((c != '\n') && (c != '\r')) {
 			big_int.digits.push_back(c);
 		}
 	}
 	return input;
+}
+
+bool isNewline(std::istream &input, char c) {
+	return (c == '\n') || (c == '\r' && input.peek() == '\n');
 }
 
 BigInteger BigInteger::addVectors(const std::vector<char> &val_digits) {
