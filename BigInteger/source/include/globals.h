@@ -1,5 +1,5 @@
-/*
- *	Author:			Haleeq Usman
+/**
+ *	Author: Haleeq Usman
  *
  *	This file contains our static/global variables/constants,
  *	data structures (enum, structs, classes, etc...), and

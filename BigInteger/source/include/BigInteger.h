@@ -1,5 +1,5 @@
-/*
- *	Author:			Haleeq Usman
+/**
+ *	Author: Haleeq Usman
  *
  *	This file contains the definition for our simple BigInteger class.
  *

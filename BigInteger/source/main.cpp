@@ -1,6 +1,5 @@
-/*
- *
- *	Author:			Haleeq Usman
+/**
+ *	Author: Haleeq Usman
  *
  *	This file contains the main executable/start point of program.
  *
