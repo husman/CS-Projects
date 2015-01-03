@@ -23,8 +23,8 @@ add_executable(biginteger ${BIGINTEGER_SOURCE_FILES})
 # Wave Audio Project
 ####################################
 set(WAVE_AUDIO_SOURCE_FILES
-    wave-project/wave_dec.cpp
-    wave-project/waveplayer.cpp
+    wave-project/source/wave_dec.cpp
+    wave-project/source/waveplayer.cpp
 )
 
 INCLUDE_DIRECTORIES(

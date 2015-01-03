@@ -1,4 +1,4 @@
-#include "globals.h"
+#include "include/globals.h"
 
 /* ................... Begin of alaw_expand() ..................... */
 /*
@@ -110,8 +110,7 @@ void cpu_uint16(uint16_t &val, int val_endian)
     if(cpu_endian() == val_endian)
         return;
     
-    val = val << 8
-        | val >> 8 & 0x00FF;
+    val = (uint16_t) ((val << 8) | (val >> 8 & 0x00FF));
 }
 
 void cpu_uint32(uint32_t &val, int val_endian)
@@ -120,9 +119,9 @@ void cpu_uint32(uint32_t &val, int val_endian)
         return;
 
     val = val << 24
-        | val << 8  & 0x00FF0000
-        | val >> 8  & 0x0000FF00
-        | val >> 24 & 0x000000FF;
+        | (val << 8  & 0x00FF0000)
+        | (val >> 8  & 0x0000FF00)
+        | (val >> 24 & 0x000000FF);
 }
 
 int read_bytes(uint8_t *dest_data, uint32_t num_bytes, FILE *file) {
@@ -169,7 +168,7 @@ int decodeWave(char *filename, WaveInfo *wInfo)
     uint16_t word;
     uint32_t dword;
 
-    uint32_t bytes_remaining;
+    int bytes_remaining;
     
     file = fopen(filename, "rb");
     if(file == NULL) {
