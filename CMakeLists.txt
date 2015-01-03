@@ -23,8 +23,10 @@ add_executable(biginteger ${BIGINTEGER_SOURCE_FILES})
 # Wave Audio Project
 ####################################
 set(WAVE_AUDIO_SOURCE_FILES
-    wave-project/source/wave_dec.cpp
-    wave-project/source/waveplayer.cpp
+    wave-project/source/main.cpp
+    wave-project/source/byte_reader.cpp
+    wave-project/source/wave_player.cpp
+    wave-project/source/wave_decoder.cpp
 )
 
 INCLUDE_DIRECTORIES(
@@ -34,7 +36,6 @@ INCLUDE_DIRECTORIES(
 link_directories(
     /usr/local/lib
 )
-
 
 add_executable(wave_project ${WAVE_AUDIO_SOURCE_FILES})
 target_link_libraries(wave_project SDL2 SDL2main SDL2_mixer)
