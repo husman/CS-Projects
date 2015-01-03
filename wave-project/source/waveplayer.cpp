@@ -342,12 +342,11 @@ void playWave(WaveInfo *wInfo)
     }
 
     SDL_FreeSurface(image);
+    
     //Need to make sure that SDL_mixer and SDL have a chance to clean up
     Mix_CloseAudio();
     SDL_Quit();
 
     printf("\naudio playback complete\n\n");
-
-    //Return success!
     return;
 }
