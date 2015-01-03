@@ -39,3 +39,13 @@ link_directories(
 
 add_executable(wave-project ${WAVE_AUDIO_SOURCE_FILES})
 target_link_libraries(wave-project SDL2 SDL2main SDL2_mixer)
+
+####################################
+# Jpeg Decoder Project
+####################################
+set(JPEG_DECODER_PROJECT_SOURCE_FILES
+    jpeg-decoder-project/source/main.cpp
+    jpeg-decoder-project/source/byte_reader.cpp
+    jpeg-decoder-project/source/jpeg_decoder.cpp
+)
+add_executable(jpeg-decoder-project ${JPEG_DECODER_PROJECT_SOURCE_FILES})
