@@ -13,11 +13,11 @@ ENDIF(WIN32)
 # Unbounded Integer Implementation #
 ####################################
 set(BIGINTEGER_SOURCE_FILES
-    BigInteger/source/BigInteger.cpp
-    BigInteger/source/main.cpp
+    big-integer-project/source/BigInteger.cpp
+    big-integer-project/source/main.cpp
 )
 
-add_executable(biginteger ${BIGINTEGER_SOURCE_FILES})
+add_executable(big-integer-project ${BIGINTEGER_SOURCE_FILES})
 
 ####################################
 # Wave Audio Project
@@ -37,5 +37,5 @@ link_directories(
     /usr/local/lib
 )
 
-add_executable(wave_project ${WAVE_AUDIO_SOURCE_FILES})
-target_link_libraries(wave_project SDL2 SDL2main SDL2_mixer)
+add_executable(wave-project ${WAVE_AUDIO_SOURCE_FILES})
+target_link_libraries(wave-project SDL2 SDL2main SDL2_mixer)
