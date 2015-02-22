@@ -29,12 +29,17 @@ set(WAVE_AUDIO_SOURCE_FILES
     wave-project/source/wave_decoder.cpp
 )
 
+################################
+# Includes and Libraries Dir.
+################################
 INCLUDE_DIRECTORIES(
     /usr/local/include
+    /Users/haleeq/dev/cpp/test/include
 )
 
 link_directories(
     /usr/local/lib
+    /Users/haleeq/dev/cpp/test/libs
 )
 
 add_executable(wave-project ${WAVE_AUDIO_SOURCE_FILES})
@@ -49,3 +54,13 @@ set(JPEG_DECODER_PROJECT_SOURCE_FILES
     jpeg-decoder-project/source/jpeg_decoder.cpp
 )
 add_executable(jpeg-decoder-project ${JPEG_DECODER_PROJECT_SOURCE_FILES})
+
+include(euler-project/euler-project.cmake)
+include(algorithms/bfs/bfs-project.cmake)
+# include(algorithms/queue/queue-project.cmake)
+
+set(RANDOM_SOURCE_FILES
+    algorithms/random/main.cpp
+)
+
+add_executable(random-project ${RANDOM_SOURCE_FILES})

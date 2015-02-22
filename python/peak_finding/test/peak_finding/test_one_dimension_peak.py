@@ -1,7 +1,8 @@
 from peak_finding.one_dimension_peak import OneDimensionPeak
 from hamcrest import *
 
-class TestOneDimensionPeak:
+
+class TestOneDimensionPeak(object):
     def setUp(self):
         pass
 

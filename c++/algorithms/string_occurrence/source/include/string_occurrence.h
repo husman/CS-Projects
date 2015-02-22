@@ -1,0 +1,4 @@
+#ifndef STRING_OCCURRENCE_H
+#define STRING_OCCURRENCE_H
+
+#endif
